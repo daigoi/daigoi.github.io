@@ -1,6 +1,7 @@
-body{background: #f0f8ff; font-family: 'Calibri'; font-size: 19px;}
-h1{font-family: 'Helvetica', 'Arial', sans-serif;}
+body{background: #FFFCF6; font-family: system-ui; font-size: 18px; color: #454545;}
+h1{font-family: system-ui;}
 .header{text-align:center}
-.navigation{text-align:center; background-color: #f0f8ff;}
-.bref{color: blue;}
+.navigation{text-align:center; background-color: #FFFCF6;}
+.black{color: black;}
+.gray{color: #707070;}
 a:link {text-decoration: none; color: #0000FF;}
