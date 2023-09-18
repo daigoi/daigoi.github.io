@@ -11,4 +11,13 @@ a:hover {color: #707070;}
 .navigation a:visited {color: #454545;}
 .navigation a:hover{color: black;}
 
+.image-right {
+    width: 350px;  /* Same width as the image */
+    float: right;  /* Aligns the figure to the right */
+}
+
+.image-right figcaption {
+    display: block;
+    text-align: center;  /* If you want the caption to be centered within the figure */
+}
 
