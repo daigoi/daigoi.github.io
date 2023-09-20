@@ -20,7 +20,7 @@ a:hover {color: #707070;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;           /* Adjust this value as needed */
+    padding: 10px 0;           /* Adjust this value as needed */
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;       /* This provides space between entries */
 }
