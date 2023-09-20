@@ -11,4 +11,19 @@ a:hover {color: #707070;}
 .navigation a:visited {color: #454545;}
 .navigation a:hover{color: black;}
 
+.seminar-entry {
+    display: flex;
+    justify-content: space-between; /* Distributes the information across the width */
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc; /* Adds a horizontal line */
+}
 
+.seminar-entry:last-child {
+    border-bottom: none; /* Removes the border from the last entry */
+}
+
+.date, .speaker, .topic, .links {
+    flex: 1; /* Takes up equal width */
+    text-align: center; /* Centers the text within its container */
+}
