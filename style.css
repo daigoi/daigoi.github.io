@@ -14,15 +14,20 @@ a:hover {color: #707070;}
 .seminar-list {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    padding: 15px 0;
 }
 
 .seminar-entry {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 7px 0;           /* Adjust this value as needed */
     border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;       /* This provides space between entries */
+}
+
+.seminar-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;          /* No margin for the last item to center it properly */
 }
 
 .date, .speaker, .topic, .links {
