@@ -1,0 +1,42 @@
+body{background: #FFFCF6; font-family: system-ui; font-size: 18px; color: #454545;}
+h1{font-family: system-ui;}
+a:link {text-decoration: none; color: #42A8FF;}
+a:visited {text-decoration: none; color: #42A8FF;}
+a:hover {color: #707070;}
+
+.header{text-align:center}
+
+.navigation{text-align:center; background-color: #FFFCF6;}
+.navigation a:link{color: #707070;}
+.navigation a:visited {color: #454545;}
+.navigation a:hover{color: black;}
+
+.seminar-list {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.seminar-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;           /* Adjust this value as needed */
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;       /* This provides space between entries */
+}
+
+.seminar-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;          /* No margin for the last item to center it properly */
+}
+
+.date, .speaker, .topic, .links {
+    flex: 1;
+    text-align: center;
+}
+
+details li {
+    margin-left: 20px;
+    /* or use padding-left: 20px; */
+}
+
