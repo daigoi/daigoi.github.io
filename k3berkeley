@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RLGFP0QWY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4RLGFP0QWY');
+</script>
+    <title> GRT seminar F23 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <title> K3Berkeley </title>
+</head>
+<body>
+<div class = "header"> <h1> Topics in K3 surfaces and derived categoies </h1> </div>
+<div class = "navigation">
+    <hr size="1" noshade>
+</div>
+<div style="width: 70%; margin: auto;">
+    <b>Topic:</b> K3 <br>
+    <b>Meeting time:</b> TBD <br>
+    <b>Room:</b> TBD (UC Berkeley) <br>
+    <b>Organizers:</b> <a href="./index.html">Daigo Ito</a><br>
+</div>
+<div class = "main" style="width: 70%; margin: auto;">
+<h1> Schedule </h1>
+    <div class="seminar-list">
+        <div class="seminar-entry">
+            <span class="date">12/13/2023</span>
+            <span class="speaker">Daigo Ito </span>
+            <span class="topic"> Overview of topics in K3 surfaces ([K3, 7,10,13,16][FM, 10]) </span>
+            <span class="links"><a href=""> </a></span>
+        </div>
+        <div class="seminar-entry">
+            <span class="date">12/22/2023</span>
+            <span class="speaker">Garrett Brown </span>
+            <span class="topic"> Defintions and basic properties of K3 surfaces [K3, 1.1-1.3] </span>
+            <span class="links"><a href=""> </a></span>
+        </div>
+        <div class="seminar-entry">
+            <span class="date">12/29/2023</span>
+            <span class="speaker">Daigo Ito </span>
+            <span class="topic"> Mukai vectors/pairings and Grothendieck-Riemann-Roch theorem ([K3, 9.1], [FM, 5.2]) </span>
+            <span class="links"><a href="https://cdn.fbsbx.com/v/t59.2708-21/414285210_728665265560843_1003444110928406044_n.pdf/K3.pdf?_nc_cat=105&ccb=1-7&_nc_sid=2b0e22&_nc_ohc=HHXk9UpBBtkAX9-rSnN&_nc_ht=cdn.fbsbx.com&oh=03_AdTRB8dVLdCmwXmhxka0YpXJLjkXiGC3IOZkPBaHV8oqyg&oe=65A9FAFB&dl=1"> Note </a></span>
+        </div>
+        <div class="seminar-entry">
+            <span class="date">1/5/2024</span>
+            <span class="speaker">Daigo Ito </span>
+            <span class="topic"> Algebraic approach to slope stabiliy of tangent bundle ([K3, 9.2,9.4]) </span>
+            <span class="links"><a href="https://cdn.fbsbx.com/v/t59.2708-21/417471131_1329281544426527_2548659154265631422_n.pdf/Print.pdf?_nc_cat=104&ccb=1-7&_nc_sid=2b0e22&_nc_ohc=xuU3-DivxeAAX-DXCRv&_nc_ht=cdn.fbsbx.com&oh=03_AdRuLqiCY1BVppJMuT6EwRW3uxlwWXvT3DYFHaAAmpIJvQ&oe=65AA2188&dl=1"> Note </a></span>
+        </div>
+    </div>
+</div>
+<div class = "main" style="width: 70%; margin: auto;">
+<h1> Reference </h1>
+    [K3] Daniel Huybrechts, <a href="https://www.math.uni-bonn.de/people/huybrech/K3Global.pdf"> Lectures on K3 surfaces </a> <br>
+    [FM] Daniel Huybrechts, Fourier-Mukai Transforms in Algebraic Geometry <br>
+</div>
+<body>
