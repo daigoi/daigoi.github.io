@@ -34,3 +34,9 @@ a:hover {color: #707070;}
     flex: 1;
     text-align: center;
 }
+
+details li {
+    margin-left: 20px;
+    /* or use padding-left: 20px; */
+}
+
