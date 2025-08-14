@@ -40,3 +40,41 @@ details li {
     /* or use padding-left: 20px; */
 }
 
+/* Icon row */
+.icon-row {
+  display: inline-flex;          /* or flex if you want it full-width */
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  color: inherit;                /* icons use current text color */
+}
+
+/* Base size; tweak as you like */
+.icon-row a {
+  font-size: 1.35rem;            /* try 1.1–1.6rem depending on header size */
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* Hover/focus states */
+.icon-row a:hover,
+.icon-row a:focus-visible {
+  opacity: 0.8;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Screen-reader-only helper (reusable) */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Optional sizes you can apply as a modifier class */
+.icon-row--sm a { font-size: 1.1rem; }
+.icon-row--lg a { font-size: 1.6rem; }
+
+/* Optional: light/dark mode color tweak (inherits to icons) */
+@media (prefers-color-scheme: dark) {
+  .icon-row { color: #eee; }
+}
