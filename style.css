@@ -91,7 +91,7 @@ details li {
 
 /* Bigger icons */
 .header-icons a {
-  font-size: 2rem;    /* try 1.8–2.2rem */
+  font-size: 3rem;    /* try 1.8–2.2rem */
   line-height: 1;
   text-decoration: none;
   padding: 2px;       /* larger click target */
@@ -100,4 +100,5 @@ details li {
   .header-icons a { font-size: 1.1rem; }
   .header-icons { top: 6px; right: 10px; }
 }
+
 
