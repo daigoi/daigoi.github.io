@@ -88,8 +88,16 @@ details li {
   display: inline-flex;
   gap: 0.6rem;
 }
-.header-icons a { font-size: 1.35rem; line-height: 1; text-decoration: none; }
+
+/* Bigger icons */
+.header-icons a {
+  font-size: 2rem;    /* try 1.8–2.2rem */
+  line-height: 1;
+  text-decoration: none;
+  padding: 2px;       /* larger click target */
+}
 @media (max-width: 640px) {
   .header-icons a { font-size: 1.1rem; }
   .header-icons { top: 6px; right: 10px; }
 }
+
