@@ -78,3 +78,18 @@ details li {
 @media (prefers-color-scheme: dark) {
   .icon-row { color: #eee; }
 }
+
+/* Put icons at the right-top of the nav bar */
+.navigation { position: relative; min-height: 44px; }  /* ensures room for icons */
+.header-icons {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  display: inline-flex;
+  gap: 0.6rem;
+}
+.header-icons a { font-size: 1.35rem; line-height: 1; text-decoration: none; }
+@media (max-width: 640px) {
+  .header-icons a { font-size: 1.1rem; }
+  .header-icons { top: 6px; right: 10px; }
+}
