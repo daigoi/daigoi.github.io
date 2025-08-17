@@ -101,4 +101,59 @@ details li {
   .header-icons { top: 6px; right: 10px; }
 }
 
+/* Ensure icons receive hover even if something overlaps */
+.header-icons { z-index: 1000; }
+
+/* Styled tooltip bubble for icon links */
+.header-icons a[data-tip] { position: relative; }
+
+/* bubble */
+.header-icons a[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 125%;             /* place above; use top:125% to place below */
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #454545;      /* matches your text color */
+  color: #FFFCF6;           /* matches your page bg */
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+/* arrow */
+.header-icons a[data-tip]::before {
+  content: "";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #454545;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+
+/* show on hover & keyboard focus */
+.header-icons a[data-tip]:hover::after,
+.header-icons a[data-tip]:focus-visible::after,
+.header-icons a[data-tip]:hover::before,
+.header-icons a[data-tip]:focus-visible::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* optional: disable on touch-only devices */
+@media (hover: none) {
+  .header-icons a[data-tip]::before,
+  .header-icons a[data-tip]::after { display: none; }
+}
+
 
