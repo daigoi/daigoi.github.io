@@ -338,7 +338,7 @@ let mathReady=false;
 const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function toTex(text){
  if(text.includes(': turn to see width'))return String.raw`\Delta ${text[1]}\colon\ \text{turn to see width}`;
- return String(text).replace(/^axis: /,String.raw`\text{axis: }`).replace(/√\(1 − y\)/g,String.raw`\sqrt{1-y}`).replace(/√([xy])/g,(_,v)=>`\\sqrt{${v}}`).replace(/x\/2/g,String.raw`\frac{x}{2}`).replace(/²/g,'^2').replace(/³/g,'^3').replace(/π/g,'\\pi ').replace(/ρ/g,'\\rho ').replace(/Δ/g,'\\Delta ').replace(/−/g,'-').replace(/≈/g,'\\approx ').replace(/↔/g,'\\leftrightarrow ');
+ return String(text).replace(/^axis: /,String.raw`\text{axis: }`).replace(/√\(1 − y\)/g,String.raw`\sqrt{1-y}`).replace(/√([xy])/g,(_,v)=>`\\sqrt{${v}}`).replace(/x\/2/g,String.raw`\frac{x}{2}`).replace(/²/g,'^2').replace(/³/g,'^3').replace(/π/g,'\\pi ').replace(/Δ/g,'\\Delta ').replace(/−/g,'-').replace(/≈/g,'\\approx ').replace(/↔/g,'\\leftrightarrow ');
 }
 function mathGraphic(tex,display=false){
  const key=Number(display)+':'+tex;if(mathCache.has(key))return mathCache.get(key);
@@ -509,7 +509,7 @@ function draw(){
      const ends=m.axis==='x'?[[m.source[0]-.08*span,m.offset,0],[m.source[1]+.1*span,m.offset,0]]:[[m.offset,-.12*ymax,0],[m.offset,ymax*1.2,0]];
      line(ends,'#7b6356',1.6,[8,4]);label(`axis: ${m.axis==='x'?'y':'x'} = ${m.offset}`,ends[1],m.axis==='x'?-30:42,-15,'#7b6356',13);
      if(f.kind==='shell'){
-       const p=[u,f.low(u),0],q=[m.offset,f.low(u),0];dimension(q,p,'ρ',0,13);dimension(d.segment[0],d.segment[1],'h',14,0);
+       const p=[u,f.low(u),0],q=[m.offset,f.low(u),0];dimension(q,p,'r',0,13);dimension(d.segment[0],d.segment[1],'h',14,0);
      }else{
        if(activeView==='top'){radiusDimension(axisPoint(u),radialPoint(u,d.outer,0),'R',-26);if(d.inner>1e-8)radiusDimension(axisPoint(u),radialPoint(u,d.inner,0),'r',26);}
        else{const angle=state.stage==='region'?0:Math.min(state.angle*PI/180,.55);dimension(axisPoint(u),radialPoint(u,d.outer,angle),'R',0,-11);if(d.inner>1e-8)dimension(axisPoint(u),radialPoint(u,d.inner,angle*.6),'r',0,13);}
@@ -535,7 +535,7 @@ function unitSVG(d){
  if(f.kind==='square'){const s=model().side(value()),w=92*s/.25;return `<rect x="${114-w/2}" y="${60-w/2}" width="${w}" height="${state.stage==='region'?0:w}" ${fill} ${ink}/><path d="M${114-w/2} 110H${114+w/2}" ${ink}/>${d.coefficient<1e-10?math('A=0',114,60,17):w<28||state.stage==='region'?'':math('A(x)',114,60,17)}${math('s(x)',186,60)}`;}
  if(f.kind==='shell'){
    const maxR=Math.max(...sample(f.radius,f.bounds)),maxH=Math.max(...sample(x=>f.high(x)-f.low(x),f.bounds)),w=150*d.radius/Math.max(maxR,.001),h=65*d.height/Math.max(maxH,.001),x=105-w/2,y=58-h/2;
-   return `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${fill} ${ink}/>${math(String.raw`\text{width}\approx 2\pi\rho`,105,110,14)}${math('h',Math.min(209,x+w+15),58,15)}${d.coefficient<1e-10?math(String.raw`\text{zero contribution}`,105,44,12):''}`;
+   return `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${fill} ${ink}/>${math(String.raw`\text{width}\approx 2\pi r`,105,110,14)}${math('h',Math.min(209,x+w+15),58,15)}${d.coefficient<1e-10?math(String.raw`\text{zero contribution}`,105,44,12):''}`;
  }
  const maxR=Math.max(...sample(f.outer,f.bounds)),R=45*d.outer/Math.max(maxR,.001),r=45*d.inner/Math.max(maxR,.001);
  const ring=`M${108+R} 60a${R},${R} 0 1,0 ${-2*R},0a${R},${R} 0 1,0 ${2*R},0 M${108+r} 60a${r},${r} 0 1,1 ${-2*r},0a${r},${r} 0 1,1 ${2*r},0`;
@@ -559,9 +559,9 @@ function update(){
  if(!intro){setMath('length-label',square?'x-x^2':toTex(shell?f.rText:f.outerText),square?'Side · ':shell?'Radius · ':'Outer radius · ');$('length-value').textContent=(square?d.side:shell?d.radius:d.outer).toFixed(4);}
  if(intro){$('area-label').textContent='Cross-sectional area';setMath('area-value','A(x)');}
  else{setMath('area-label',square?'(x-x^2)^2':toTex(shell?f.hText:f.innerText),square?'Area · ':shell?'Height · ':'Inner radius · ');$('area-value').textContent=(square?d.area:shell?d.height:d.inner).toFixed(4);}
- $('coefficient-row').hidden=cross;setMath('coefficient-label',shell?String.raw`2\pi\rho h`:String.raw`\pi(R^2-r^2)`,'',shell?' · contribution per unit thickness':' · cross-sectional area');$('coefficient-value').textContent=d.coefficient.toFixed(4);
+ $('coefficient-row').hidden=cross;setMath('coefficient-label',shell?String.raw`2\pi r h`:String.raw`\pi(R^2-r^2)`,'',shell?' · contribution per unit thickness':' · cross-sectional area');$('coefficient-value').textContent=d.coefficient.toFixed(4);
  $('equation').innerHTML=integralHTML();
- const volumeElement=cross?String.raw`A(x)\,\Delta x`:shell?String.raw`2\pi\rho h\,\Delta ${variable}`:String.raw`\pi(R^2-r^2)\,\Delta ${variable}`;
+ const volumeElement=cross?String.raw`A(x)\,\Delta x`:shell?String.raw`2\pi r h\,\Delta ${variable}`:String.raw`\pi(R^2-r^2)\,\Delta ${variable}`;
  setMath('slice-formula',String.raw`\text{Slice volume}\approx ${volumeElement}`);
  const delta=(f.bounds[1]-f.bounds[0])/state.count,actualWidth=Math.min(f.bounds[1],u+delta/2)-Math.max(f.bounds[0],u-delta/2);
  setMath('width-label',String.raw`\Delta ${variable}`,'Slice width ');if(intro)setMath('width-value',String.raw`\frac{b-a}{${state.count}}`);else $('width-value').textContent=delta.toFixed(4);
@@ -585,7 +585,7 @@ function update(){
  document.querySelectorAll('[data-stage]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.stage===state.stage)));requestDraw();
 }
 function populateMethods(){const m=model();$('method').innerHTML=(m.methods||[]).map((f,i)=>`<option value="${i}">${f.name.split(' · ')[0]}</option>`).join('');$('method').value=String(state.method);}
-function changeModel(key){state.model=key;state.method=0;state.t=.5;state.angle=model().kind==='revolution'?0:360;$('slice').value=50;$('turn').value=state.angle;populateMethods();setView(model().kind==='revolution'||state.stage==='region'&&model().kind==='square'?'top':'three');update();}
+function changeModel(key){state.model=key;state.method=0;state.t=.5;state.outlines=key==='example';$('outlines').checked=state.outlines;state.angle=model().kind==='revolution'?0:360;$('slice').value=50;$('turn').value=state.angle;populateMethods();setView(model().kind==='revolution'||state.stage==='region'&&model().kind==='square'?'top':'three');update();}
 // Figure numbers in the current nine-page notes. Exercise 2 reuses Fig. 8's region with a shifted axis.
 const noteFigures={intro:'Fig. 1',example:'Figs. 2–3',disk:'Fig. 4',washer:'Fig. 5',shiftedWasher:'Fig. 6',lens:'Figs. 7–8',shiftedShell:'Fig. 8 region',parabola:'Fig. 9',cone:'Fig. 10'};
 const menuNames={intro:'General cross-sections',example:'Square cross-sections',disk:'Disks · x-axis',washer:'Washers · x-axis',shiftedWasher:'Shifted washers · Ex. 1',lens:'Shells / washers · y-axis',shiftedShell:'Shifted axis · Ex. 2',parabola:'Choose a strategy · Ex. 3',cone:'Cone · Ex. 4 (optional)'};
