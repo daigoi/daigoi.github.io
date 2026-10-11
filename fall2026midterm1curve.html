@@ -121,32 +121,3 @@ const CURVE_SETTINGS = {"003":[168.5,156.5,146.5,126.5,111.5,96.5,86.5,76.5,66.5
 })();
 
 </script></body></html>
-    score.setAttribute('aria-invalid', 'false');
-    group.setAttribute('aria-invalid', 'false');
-    if (!CurveCore.GROUPS.includes(group.value)) {
-      error.textContent = 'Choose the exam group you took.';
-      group.setAttribute('aria-invalid', 'true');
-      clearResult();
-      if (focusError) group.focus();
-      return;
-    }
-    if (score.value.trim() === '' || !Number.isFinite(Number(score.value)) || Number(score.value) < 0 || Number(score.value) > 180) {
-      error.textContent = 'Enter a score between 0 and 180.';
-      score.setAttribute('aria-invalid', 'true');
-      clearResult();
-      if (focusError) score.focus();
-      return;
-    }
-    const row = CurveCore.convert(Number(score.value), config[group.value]);
-    const display = CurveCore.percentLabel(row).replace('<', '&lt;');
-    result.innerHTML = '<p class="result-heading">' + CurveCore.LABELS[group.value].toUpperCase() + ' · ADJUSTED RESULT</p><div class="result-main"><div class="percent">' + display + '<span class="unit">%</span></div><div class="letter" aria-label="Letter band ' + row.band + '">' + row.band + '</div></div><p class="result-caption">' + row.raw + ' / 180 raw points · ' + row.rawPercent.toFixed(2) + '% before adjustment</p>';
-    renderBands(row.band);
-  }
-  form.addEventListener('submit', event => { event.preventDefault(); attempted = true; calculate(true); });
-  score.addEventListener('input', () => { if (attempted) calculate(false); });
-  group.addEventListener('change', () => { if (attempted) calculate(false); });
-  form.addEventListener('reset', () => { attempted = false; error.textContent = ''; score.setAttribute('aria-invalid', 'false'); group.setAttribute('aria-invalid', 'false'); clearResult(); });
-  renderBands(null);
-})();
-
-</script></body></html>
