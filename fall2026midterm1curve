@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="description" content="Calculus II Midterm 1 score conversion calculator."><title>Midterm 1 Score Calculator · Calculus II</title><style>:root{color-scheme:light;--ink:#173632;--muted:#58716b;--teal:#14685c;--soft:#eaf3ef;--line:#d4e0db;--paper:#f7f8f4;--gold:#8a621c;--amber:#fff6df;--error:#a12d32;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;background:var(--paper);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,a,input,select,summary{touch-action:manipulation}button,a,summary{cursor:pointer}a{color:var(--teal);text-underline-offset:3px}button:disabled{opacity:.5;cursor:not-allowed}button{min-height:44px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #a87525;outline-offset:4px}input,select{color:var(--ink);background:white;border:1px solid #97afa6;border-radius:7px;padding:12px;width:100%;min-width:0;min-height:48px}input[aria-invalid=true]{border-color:var(--error)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.55rem);letter-spacing:-.035em;line-height:1.08;margin-bottom:17px;max-width:770px}h2{font-size:1.3rem;line-height:1.3;letter-spacing:-.025em}h3{font-size:1rem}p{margin-bottom:1rem}.wrap{max-width:1180px;margin:auto;padding:0 32px}.topbar{border-bottom:1px solid var(--line);background:#fff}.nav{min-height:80px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:flex;gap:13px;align-items:center;font-weight:650;font-size:.97rem}.mark{width:36px;height:40px;background:var(--teal);color:white;font-family:Georgia,serif;font-size:27px;display:grid;place-items:center;border-radius:4px}.term{font-size:.8rem;color:var(--muted)}main{padding-top:44px;padding-bottom:48px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.71rem;font-weight:700;color:var(--teal);margin-bottom:13px}.intro{font-size:1.06rem;color:var(--muted);max-width:670px}.notice{border-left:3px solid #bb8d39;background:var(--amber);padding:13px 17px;font-size:.89rem;margin:26px 0 30px;color:#644817}.notice p:last-child{margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:28px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:13px;padding:27px}.section-title{display:flex;align-items:center;gap:10px;margin-bottom:21px}.step{border-radius:50%;border:1px solid var(--line);width:26px;height:26px;display:grid;place-items:center;font-size:.77rem;font-weight:600}.section-title h2{margin:0}.fields{display:grid;grid-template-columns:1.12fr 1fr;gap:18px}.field label{display:block;font-size:.87rem;font-weight:650;margin-bottom:7px}.help{font-size:.78rem;color:var(--muted);margin:8px 0 0}.primary{background:var(--teal);color:#fff;border:1px solid var(--teal);border-radius:7px;padding:11px 21px;font-weight:600}.primary:hover{background:#0e5046}.secondary{background:#fff;color:var(--ink);border:1px solid #a6bdb3;border-radius:7px;padding:9px 16px;font-size:.88rem}.secondary:hover{background:var(--soft)}.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:21px}.error{color:var(--error);font-size:.85rem;margin:11px 0 0;min-height:1.3em}.error:empty{display:none}.result{margin-top:26px;padding:25px 26px;background:var(--soft);border-radius:9px;min-height:197px}.result-heading{font-size:.79rem;color:var(--muted);font-weight:600;margin-bottom:9px}.result-main{display:flex;justify-content:space-between;align-items:center;gap:16px}.percent{font-variant-numeric:tabular-nums;font-size:clamp(2.35rem,5vw,3.4rem);font-weight:550;line-height:1.15;letter-spacing:-.045em}.percent .unit{font-size:1.2rem;font-weight:400;margin-left:4px}.letter{background:#fff;border:1px solid #b7d0c6;min-width:76px;min-height:69px;display:flex;align-items:center;justify-content:center;border-radius:9px;font-size:1.9rem;font-weight:650}.result-caption{font-size:.82rem;color:var(--muted);margin-top:13px;margin-bottom:0}.empty{font-size:1.07rem;max-width:330px;margin:19px 0 0;color:var(--muted)}.smallprint{font-size:.79rem;color:var(--muted);margin:15px 0 0}.scale-title{display:flex;justify-content:space-between;align-items:baseline;gap:15px}.scale-title h2{margin-bottom:4px}.tag{font-size:.7rem;padding:4px 8px;border-radius:4px;color:var(--teal);background:var(--soft);font-weight:650;white-space:nowrap}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;text-align:left}th{font-size:.73rem;color:var(--muted);font-weight:600;padding:10px 8px;border-bottom:1px solid var(--line)}td{font-size:.86rem;padding:8px;border-bottom:1px solid #e6ece8}tbody tr:last-child td{border-bottom:0}.bandrow.active{background:var(--soft);color:#0d564b}.bandrow.active td:first-child{font-weight:800}.bandrow td:first-child{width:33%}.arrow{font-size:.8rem;margin-left:8px;color:var(--teal)}.details{margin-top:24px;border-top:1px solid var(--line);padding-top:18px}.details summary{font-weight:600;font-size:.9rem;min-height:30px}.details p{font-size:.85rem;color:var(--muted);margin:13px 0 0}.diagram{width:100%;height:auto;display:block;margin:16px 0 0}.chart-caption{font-size:.76rem;color:var(--muted);margin-top:7px}.footer{padding:25px 0 34px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted);display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer p{margin:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}.subtle{color:var(--muted)}.editor-main{padding-top:35px}.editor-main h1{font-size:2.8rem}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:26px}.stat{padding:20px 23px;background:#fff;border:1px solid var(--line);border-radius:10px}.stat h2{font-size:1rem;margin-bottom:3px}.metric{font-size:1.9rem;font-weight:550;letter-spacing:-.035em}.stat small{font-size:.77rem;color:var(--muted)}.stat-line{font-size:.8rem;color:var(--muted);margin-top:7px}.editor-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(330px,1fr);gap:24px;align-items:start}.table-scroll{overflow:auto;max-width:100%}.cutoff-table input{padding:7px 8px;min-height:42px;width:105px;max-width:100%;font-size:.86rem}.cutoff-table td{padding:7px 6px}.cutoff-table th{white-space:nowrap}.pool-value{color:var(--teal);font-weight:600}.micro{font-size:.74rem;color:var(--muted);line-height:1.5}.status{font-size:.79rem;color:var(--teal);min-height:1.4em;margin:12px 0 0}.distribution{margin-top:24px}.count-table th,.count-table td{text-align:center;font-size:.78rem;padding:8px 5px}.count-table th:first-child,.count-table td:first-child{text-align:left}.count-table tr:last-child td{border-top:1px solid var(--line);font-weight:650}.reasoning{margin-top:25px}.reasoning li{font-size:.84rem;color:var(--muted);margin:8px 0}.reasoning ul{padding-left:19px}.private-label{border:1px solid #c0cec7;padding:5px 9px;border-radius:5px;font-size:.72rem;font-weight:650}.download-note{font-size:.76rem;margin:10px 0 0;color:var(--muted)}.toolbar{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:14px}.toolbar .field{flex:1;min-width:150px}.toggle-view{display:flex;gap:12px;align-items:center}.ledger{max-height:420px;overflow:auto}.ledger th{position:sticky;top:0;background:white}.group-strip{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.group-chip{background:var(--soft);color:var(--teal);border-radius:4px;padding:4px 9px;font-size:.78rem}.save-actions{padding-top:20px;border-top:1px solid var(--line);margin-top:22px}.filename{font-family:ui-monospace,SFMono-Regular,monospace;font-size:.78rem}.chart-legend{display:flex;gap:16px;font-size:.74rem;flex-wrap:wrap;color:var(--muted)}.chart-legend span{display:flex;align-items:center;gap:5px}.swatch{width:20px;height:3px;background:var(--teal);display:inline-block}.swatch.raw{height:0;border-top:2px dashed #8a9a94;background:transparent}.table-note{font-size:.75rem;margin-bottom:0;color:var(--muted)}.skip{position:absolute;left:10px;top:-70px;background:white;padding:10px;z-index:10}.skip:focus{top:10px}@media(max-width:850px){.layout,.editor-grid{grid-template-columns:1fr}.layout aside{max-width:none}.stats{gap:10px}.stat{padding:17px}.wrap{padding:0 22px}.nav{min-height:70px}.term{font-size:.74rem}}@media(max-width:520px){.wrap{padding:0 17px}main{padding-top:30px}.panel{padding:20px}.fields{grid-template-columns:1fr;gap:17px}.brand{font-size:.88rem}.term{max-width:85px;text-align:right}.notice{margin:22px 0}.result{padding:22px 19px}.result-main{gap:10px}.stats{grid-template-columns:1fr}.stat{display:grid;grid-template-columns:1fr auto}.stat .stat-line{grid-column:1/-1}.stat .metric{grid-column:2;grid-row:1/3;font-size:1.65rem}.editor-main h1{font-size:2.2rem}.cutoff-table{min-width:460px}.actions .primary{width:100%}.footer{gap:12px}.percent{font-size:clamp(1.75rem,8vw,2.7rem)}.letter{min-width:65px}.nav .private-label{font-size:.67rem}}@media(prefers-reduced-motion:no-preference){button{transition:background .12s ease}}@media print{.topbar,button,.actions,.save-actions,.footer{display:none}.wrap{padding:0;max-width:none}main{padding-top:0}.layout,.editor-grid{display:block}.panel{break-inside:avoid;margin-bottom:20px}.notice{margin:12px 0}.stats{grid-template-columns:repeat(3,1fr)}body{background:white}}
+</style></head><body><a class="skip" href="#main">Skip to calculator</a>
+<header class="topbar"><div class="wrap nav"><div class="brand"><span class="mark" aria-hidden="true">∫</span><span>Calculus II</span></div><span class="term">MATH UN1102 · Fall 2026</span></div></header>
+<main class="wrap" id="main">
+  <p class="eyebrow">Midterm 1</p><h1>Your score, on the<br>percentage scale.</h1>
+  <p class="intro">Choose your exam group and enter your score out of 180 to see its adjusted percentage and letter band.</p>
+  <div class="notice"><strong>Preview calculator</strong> — the curves are provisional. These results are not official grades.</div>
+  <div class="layout">
+    <section class="panel" aria-labelledby="calculator-title">
+      <div class="section-title"><span class="step" aria-hidden="true">1</span><h2 id="calculator-title">Enter your score</h2></div>
+      <form id="calculator" novalidate>
+        <div class="fields">
+          <div class="field"><label for="group">Exam group</label><select id="group" required aria-describedby="group-help"><option value="">Choose your group</option><option value="003">Section 003</option><option value="004">Section 004</option><option value="makeup">Make-up exam</option></select><p class="help" id="group-help">Took the make-up exam? Select Make-up, regardless of your regular section.</p></div>
+          <div class="field"><label for="score">Score out of 180</label><input id="score" type="number" min="0" max="180" step="any" inputmode="decimal" placeholder="e.g. 126.5" required aria-describedby="score-help form-error"><p class="help" id="score-help">Use your exam’s total point score, including any half points.</p></div>
+        </div>
+        <div class="actions"><button class="primary" type="submit">Calculate my result <span aria-hidden="true">→</span></button><button class="secondary" type="reset">Clear</button></div>
+        <p id="form-error" class="error" role="alert"></p>
+      </form>
+      <div id="result" class="result" aria-live="polite" aria-atomic="true"><p class="result-heading">YOUR ADJUSTED RESULT</p><p class="empty">Your percentage and letter band will appear here.</p></div>
+      <p class="smallprint">This is the letter band for your <strong>Midterm 1 score</strong>, not your final course grade.</p>
+      <details class="details"><summary>About your result</summary><p>Your adjusted percentage uses the grading scale for your exam group. The corresponding letter band is shown in the syllabus scale.</p><p>Letter bands use the exact adjusted percentage before display rounding. A “&lt;” result means the exact percentage is just below that boundary.</p></details>
+    </section>
+    <aside class="panel" aria-labelledby="scale-title"><div class="scale-title"><h2 id="scale-title">Percentage → letter band</h2><span class="tag">Syllabus scale</span></div><p class="micro">The same percentage bands apply to every group.</p><table><caption class="sr-only">Syllabus percentage thresholds, with your result highlighted after calculation</caption><thead><tr><th scope="col">Letter</th><th scope="col">Adjusted percentage</th></tr></thead><tbody id="bands"></tbody></table><p class="smallprint">Each minimum is inclusive. For example, 90% is A−; a value below 90% remains in the band below it.</p></aside>
+  </div>
+</main><footer class="wrap footer"><p>No name or student ID needed. Your entered score stays on this device.</p><p>Calculus II · Midterm 1 · Preview</p></footer>
+<script>
+const CurveCore = (() => {
+const BANDS = [{"label":"A+","min":97},{"label":"A","min":93},{"label":"A−","min":90},{"label":"B+","min":87},{"label":"B","min":83},{"label":"B−","min":80},{"label":"C+","min":77},{"label":"C","min":73},{"label":"C−","min":70},{"label":"D","min":60},{"label":"F","min":0}];
+const GROUPS = ["003","004","makeup"];
+const LABELS = {"003":"Section 003","004":"Section 004","makeup":"Make-up"};
+function validateCurve(curve) {
+  if (!Array.isArray(curve) || curve.length !== 10) throw new Error('Enter all ten raw-score cutoffs.');
+  for (let i = 0; i < curve.length; i++) {
+    if (!Number.isFinite(curve[i]) || curve[i] <= 0 || curve[i] >= 180)
+      throw new Error('Every cutoff must be greater than 0 and less than 180.');
+    if (i && curve[i] >= curve[i - 1])
+      throw new Error('Cutoffs must strictly decrease from A+ through D.');
+  }
+  return curve;
+}
+function anchors(curve) {
+  validateCurve(curve);
+  return [{ raw: 0, percent: 0 }, ...curve.map((raw, i) => ({ raw, percent: BANDS[i].min })).reverse(), { raw: 180, percent: 100 }];
+}
+function convert(raw, curve) {
+  validateCurve(curve);
+  if (typeof raw !== 'number' || !Number.isFinite(raw) || raw < 0 || raw > 180)
+    throw new Error('Enter a score between 0 and 180.');
+  const points = anchors(curve);
+  let percent;
+  const exact = points.find(point => point.raw === raw);
+  if (exact) percent = exact.percent;
+  else {
+    const hi = points.findIndex(point => point.raw > raw);
+    const lo = points[hi - 1], upper = points[hi];
+    percent = lo.percent + (raw - lo.raw) * (upper.percent - lo.percent) / (upper.raw - lo.raw);
+  }
+  // Classify against raw anchors to avoid floating-point boundary promotion.
+  const index = curve.findIndex(cutoff => raw >= cutoff);
+  const band = BANDS[index < 0 ? 10 : index];
+  return { raw, rawPercent: raw / 1.8, percent, band: band.label, bandIndex: index < 0 ? 10 : index };
+}
+function percentLabel(result) {
+  const displayed = Number(result.percent.toFixed(2));
+  const upper = result.bandIndex > 0 ? BANDS[result.bandIndex - 1].min : 101;
+  return displayed >= upper ? '< ' + upper.toFixed(2) : displayed.toFixed(2);
+}
+function validateSettings(settings) { const clean = {}; for (const group of GROUPS) clean[group] = validateCurve(settings[group]).slice(); return clean; }
+return { BANDS, GROUPS, LABELS, validateSettings, convert, percentLabel };
+})();
+const CURVE_SETTINGS = {"003":[168.5,156.5,146.5,126.5,111.5,96.5,86.5,76.5,66.5,60],"004":[172,160,150,130,115,100,90,80,70,60],"makeup":[170.07716049382717,158.07716049382717,148.07716049382717,128.07716049382717,113.07716049382717,98.07716049382717,88.07716049382717,78.07716049382717,68.07716049382717,60]};
+(function () {
+  const config = CurveCore.validateSettings(CURVE_SETTINGS);
+  const form = document.getElementById('calculator');
+  const group = document.getElementById('group');
+  const score = document.getElementById('score');
+  const result = document.getElementById('result');
+  const error = document.getElementById('form-error');
+  const bands = document.getElementById('bands');
+  let attempted = false;
+  function renderBands(active) {
+    bands.innerHTML = CurveCore.BANDS.map((band, i) => {
+      const range = i === 0 ? '97%–100%' : i === 10 ? 'Below 60%' : band.min + '% to below ' + CurveCore.BANDS[i - 1].min + '%';
+      return '<tr class="bandrow' + (active === band.label ? ' active' : '') + '"><td>' + band.label + (active === band.label ? '<span class="arrow" aria-label="Your result">←</span>' : '') + '</td><td>' + range + '</td></tr>';
+    }).join('');
+  }
+  function clearResult() {
+    result.innerHTML = '<p class="result-heading">YOUR ADJUSTED RESULT</p><p class="empty">Your percentage and letter band will appear here.</p>';
+    renderBands(null);
+  }
+  function calculate(focusError) {
+    error.textContent = '';
+    score.setAttribute('aria-invalid', 'false');
+    group.setAttribute('aria-invalid', 'false');
+    if (!CurveCore.GROUPS.includes(group.value)) {
+      error.textContent = 'Choose the exam group you took.';
+      group.setAttribute('aria-invalid', 'true');
+      clearResult();
+      if (focusError) group.focus();
+      return;
+    }
+    if (score.value.trim() === '' || !Number.isFinite(Number(score.value)) || Number(score.value) < 0 || Number(score.value) > 180) {
+      error.textContent = 'Enter a score between 0 and 180.';
+      score.setAttribute('aria-invalid', 'true');
+      clearResult();
+      if (focusError) score.focus();
+      return;
+    }
+    const row = CurveCore.convert(Number(score.value), config[group.value]);
+    const display = CurveCore.percentLabel(row).replace('<', '&lt;');
+    result.innerHTML = '<p class="result-heading">' + CurveCore.LABELS[group.value].toUpperCase() + ' · ADJUSTED RESULT</p><div class="result-main"><div class="percent">' + display + '<span class="unit">%</span></div><div class="letter" aria-label="Letter band ' + row.band + '">' + row.band + '</div></div><p class="result-caption">' + row.raw + ' / 180 raw points · ' + row.rawPercent.toFixed(2) + '% before adjustment</p>';
+    renderBands(row.band);
+  }
+  form.addEventListener('submit', event => { event.preventDefault(); attempted = true; calculate(true); });
+  score.addEventListener('input', () => { if (attempted) calculate(false); });
+  group.addEventListener('change', () => { if (attempted) calculate(false); });
+  form.addEventListener('reset', () => { attempted = false; error.textContent = ''; score.setAttribute('aria-invalid', 'false'); group.setAttribute('aria-invalid', 'false'); clearResult(); });
+  renderBands(null);
+})();
+
+</script></body></html>
